@@ -1,10 +1,14 @@
-/* Nim Trainer by [your name]
- * based on this flowchart:
- * https://lucid.app/lucidchart/2018baaf-4c26-4a76-a0d5-93c97f444425/view
- */
+/* Nim Trainer by [Evan Fletcher]
+* chart:
+*/
+
+ /* based on this flowchart:
+ https://lucid.app/lucidchart/2018baaf-4c26-4a76-a0d5-93c97f444425/view
+ 
 
 /* Global Variables */
-
+var trainer = false
+var count = 0
 
 /** 
  * main  
@@ -14,7 +18,13 @@
  */
 /* Main */
 function main(){
-
+let again = true 
+trainer = prompt("yes or no??");
+confirm(trainer); 
+playNim(); 
+again = prompt("wanna play again?");
+if (again == yes)  
+    main();
 }
 
 /** 
@@ -24,6 +34,18 @@ function main(){
  * @return none
  */
 function playNim(){
+    alert("Nim Game played."); 
+    let count = 0
+    if (count < 21);
+    userTurn();
+    else alert("YOU LOSE!!!")
+    else if (count >= 21);
+    cpuTurn();
+    if (count < 21 );
+    else alert('')
+
+
+
 
 }
 
@@ -34,7 +56,7 @@ function playNim(){
  * @return none
  */
 function userTurn(){
-
+    alert("userTurn successfull");
 }
 
 /** 
@@ -44,5 +66,5 @@ function userTurn(){
  * @return none
  */
 function cpuTurn(){
-
+alert("insert cpu yada yada");
 }
