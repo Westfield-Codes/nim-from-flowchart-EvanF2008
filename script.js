@@ -18,13 +18,11 @@ var count = 0
  */
 /* Main */
 function main(){
-let again = true 
-trainer = prompt("yes or no??");
-confirm(trainer); 
-playNim(); 
-again = prompt("wanna play again?");
-if (again == yes)  
-    main();
+ let again = true; 
+ trainer = confirm("Trainer??");
+ playNim(); 
+ again = confirm("wanna play again?");
+ if (again == true) main();
 }
 
 /** 
@@ -35,12 +33,12 @@ if (again == yes)
  */
 function playNim(){
     alert("Nim Game played."); 
-    let count = 0
+    let count = 0;
     if (count < 21);
-    userTurn();
+ userTurn();
     else alert("YOU LOSE!!!")
     else if (count >= 21);
-    cpuTurn();
+ cpuTurn();
     if (count < 21 );
     else alert('')
 
@@ -66,5 +64,5 @@ function userTurn(){
  * @return none
  */
 function cpuTurn(){
-alert("insert cpu yada yada");
+  alert("insert cpu yada yada");
 }
