@@ -7,8 +7,8 @@
  
 
 /* Global Variables */
-var trainer = false
-var count = 0
+var trainer = false;
+var count = 0;
 
 /** 
  * main  
@@ -17,12 +17,12 @@ var count = 0
  * @return none
  */
 /* Main */
-function main(){
- let again = true; 
- trainer = confirm("Trainer??");
- playNim(); 
- again = confirm("wanna play again?");
- if (again == true) main();
+function main() {
+    let again = false;
+    trainer = confirm("trainer??");
+    playNim();
+    again = confirm("u wanna play again??");
+    if (again == true) main();
 }
 
 /** 
@@ -32,21 +32,17 @@ function main(){
  * @return none
  */
 function playNim(){
-    alert("Nim Game played."); 
-    let count = 0;
-    if (count < 21);
- userTurn();
-    else alert("YOU LOSE!!!")
-    else if (count >= 21);
- cpuTurn();
-    if (count < 21 );
-    else alert('')
-
-
-
-
+alert("playnim functionally");
+let count = 0;
+while(count < 21){
+    userTurn();
+    if (count > 20) alert('you lose major L');
+        else{
+            cpuTurn();
+            if(count > 20) alert("You win :( cpu sad");
+        }
+    }
 }
-
 /** 
  * userTurn  
  * User enters a turn. Validation against cheating handled by recursion.
@@ -54,7 +50,17 @@ function playNim(){
  * @return none
  */
 function userTurn(){
-    alert("userTurn successfull");
+let turn= prompt("INPUT 1 or 2 or 3");
+turn = parseInt(turn);
+if (turn < 1 || turn > 3 ){
+    alert("alert your input is nonsense");
+    userTurn();
+}
+else {
+count+= turn;
+alert("count is now "+count);
+}
+alert("userturn done sassy");
 }
 
 /** 
@@ -64,5 +70,12 @@ function userTurn(){
  * @return none
  */
 function cpuTurn(){
-  alert("insert cpu yada yada");
+    if (count == 17) turn = 3;
+    else if (count == 18) turn = 2;
+    else if (turn > 18) turn = 1;
+    else if (trainer == true) turn =4-count%4;  
+    else turn = Math.floor(math.random)(3+1);
+    count+= turn;
+    alert("I counted " +turn+ "count is now " + count );
+alert("cpuTurn done cutely >:3");
 }
